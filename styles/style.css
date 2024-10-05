@@ -1,36 +1,43 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 92px 24px;
-  padding: 0 26.52px;
-  background-color: antiquewhite;
-  width: 1052px;
+  display: grid;
+  grid-template-columns: 1fr 148px 1fr;
+  padding: 92px 50px;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.13px;
+  line-height: 24.3px;
+  text-underline-position: under; /* без этого нижние подчеркивания режут буквы */
 }
 
 .header__links-list-item {
     display: flex;
-    justify-content: center;
+    align-items: center;
     list-style: circle;
     gap: 32px;
-    width: 452px;
+}
+
+.header__link {
+    text-decoration: underline;
 }
 
 .header__links-list-item_no-bullit {
     list-style: none;
 }
 
+.header__link_active {
+    text-decoration: none;
+}
+
 .header__logo {
-    height: auto;
-    width: 148px;
     height: 105px;
-    
+}
+
+.header__logo-image {
+    height: 100%;
 }
 
 .address {
-    width: 452px;
-    padding-left: 194px;
+    font-style: normal;
+    align-self: center;
+    justify-self: end;
+    padding-right: 35px;  /* сделал этот отступ, тк иначе не получалось выровнить блок адреса как в макете */
 }
